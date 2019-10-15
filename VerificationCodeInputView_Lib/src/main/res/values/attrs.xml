@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="VerificationCodeInputView">
+        <!--输入框的数量-->
+        <attr name="vciv_et_number" format="integer" />
+        <!--输入类型-->
+        <attr name="vciv_et_inputType">
+            <enum name="number" value="0" />
+            <enum name="numberPassword" value="1" />
+            <enum name="text" value="2" />
+            <enum name="textPassword" value="3" />
+        </attr>
+        <!--输入框的宽度-->
+        <attr name="vciv_et_width" format="dimension|reference" />
+        <!--输入框的高度-->
+        <attr name="vciv_et_height" format="dimension|reference" />
+        <!--输入框文字颜色-->
+        <attr name="vciv_et_text_color" format="color|reference" />
+        <!--输入框文字大小-->
+        <attr name="vciv_et_text_size" format="dimension|reference" />
+        <!--输入框间距，不输入则代表平分-->
+        <attr name="vciv_et_spacing" format="dimension|reference" />
+        <!--输入框背景色-->
+        <attr name="vciv_et_background" format="reference|color" />
+        <!--输入框焦点宽度-->
+        <attr name="vciv_et_cursor_width" format="dimension" />
+        <!--输入框焦点高度-->
+        <attr name="vciv_et_cursor_height" format="dimension" />
+        <!--输入框焦点颜色-->
+        <attr name="vciv_et_cursor_color" format="reference" />
+        <!--输入框下划线-->
+        <attr name="vciv_et_underline_height" format="dimension" />
+        <!--输入框无焦点的下划线颜色-->
+        <attr name="vciv_et_underline_default_color" format="reference" />
+        <!--输入框有焦点的下划线颜色-->
+        <attr name="vciv_et_underline_focus_color" format="reference" />
+        <!--输入框下划线是否展示-->
+        <attr name="vciv_et_underline_show" format="boolean" />
+    </declare-styleable>
+</resources>

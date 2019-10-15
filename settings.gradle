@@ -1,0 +1,2 @@
+include ':app', ':VerificationCodeInputView_Lib'
+rootProject.name='VerificationCodeInputView'
