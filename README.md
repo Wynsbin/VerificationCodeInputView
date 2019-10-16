@@ -47,6 +47,7 @@ dependencies {
     implementation 'com.github.WShaobin:VerificationCodeInputView:1.0.1'
 }
 ```
+
 ----------
 
 ## How to use
