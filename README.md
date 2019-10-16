@@ -6,7 +6,7 @@
 
 1、能自定义输入框个数和样式
 
-2、支持长按粘贴或某些键盘粘贴功能(数字模式时，如果粘贴板第一个条不是数字则不会弹出粘贴窗)
+2、支持长按粘贴或某些键盘粘贴功能（数字模式时，如果粘贴板第一个条不是数字则不会弹出粘贴窗）
 
 ## Demo
 
@@ -41,7 +41,7 @@ Step 2. Add the dependency:
 
 ```
 dependencies {
-    implementation 'com.github.WShaobin:VerificationCodeInputView:1.0.1'
+    implementation 'com.github.WShaobin:VerificationCodeInputView:1.0.2'
 }
 ```
 
@@ -105,7 +105,7 @@ view.clearCode();
 |vciv_et_text_size|输入框文字大小|dimension|14sp|
 |vciv_et_spacing|输入框间距，不输入则代表平分|dimension||
 |vciv_et_background|输入框背景色|reference&color|Color.WHITE|
-|vciv_et_foucs_background|输入框焦点背景色|reference&color||
+|vciv_et_foucs_background|输入框焦点背景色，不输入代表不设置|reference&color||
 |vciv_et_cursor_width|输入框焦点宽度|dimension|2dp|
 |vciv_et_cursor_height|输入框焦点高度|dimension|30dp|
 |vciv_et_cursor_color|输入框焦点颜色|color|#C3C3C3|
@@ -128,5 +128,7 @@ view.clearCode();
 ### 输入框背景色支持
 
 1、@drawable/xxx
+
 2、@color/xxx
-3、#xxx
+
+3、#xxxxxx
