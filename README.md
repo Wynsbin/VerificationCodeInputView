@@ -2,11 +2,11 @@
 
 [![](https://jitpack.io/v/WShaobin/VerificationCodeInputView.svg)](https://jitpack.io/#WShaobin/VerificationCodeInputView)
 
-验证码输入框
+**验证码输入框**
 
-**1、能自定义输入框个数和样式**
+1、能自定义输入框个数和样式
 
-**2、支持长按粘贴或某些键盘粘贴功能(当数字模式时，如果粘贴板不是第一个条不是数字则不会弹出粘贴窗)**
+2、支持长按粘贴或某些键盘粘贴功能(数字模式时，如果粘贴板第一个条不是数字则不会弹出粘贴窗)
 
 ----------
 ## Demo
@@ -88,7 +88,7 @@ view.clearCode();
 |name|说明|format|默认值|
 |:--|:--|:--|:--:|
 |vciv_et_number|输入框的数量|integer|```4```|
-|vciv_et_inputType|输入框输入类型|VCInputType|```数字模式```|
+|vciv_et_inputType|输入框输入类型|enum|```数字模式```|
 |vciv_et_width|输入框的宽度|dimension|```40dp```|
 |vciv_et_height|输入框的高度|dimension|```40dp```|
 |vciv_et_text_color|输入框文字颜色|color|```Color.BLACK```|

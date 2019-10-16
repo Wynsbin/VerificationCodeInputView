@@ -15,6 +15,7 @@ import android.text.InputType;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.KeyEvent;
@@ -167,7 +168,10 @@ public class VerificationCodeInputView extends RelativeLayout {
         mEtHeight = typedArray.getDimensionPixelSize(R.styleable.VerificationCodeInputView_vciv_et_height, DensityUtils.dp2px(context, 40));
         mEtTextColor = typedArray.getColor(R.styleable.VerificationCodeInputView_vciv_et_text_color, Color.BLACK);
         mEtTextSize = typedArray.getDimensionPixelSize(R.styleable.VerificationCodeInputView_vciv_et_text_size, DensityUtils.sp2px(context, 14));
-        mEtBackground = typedArray.getResourceId(R.styleable.VerificationCodeInputView_vciv_et_background, Color.WHITE);
+        mEtBackground = typedArray.getResourceId(R.styleable.VerificationCodeInputView_vciv_et_background, -1);
+        if (mEtBackground < 0) {
+            mEtBackground = typedArray.getColor(R.styleable.VerificationCodeInputView_vciv_et_background, Color.WHITE);
+        }
         isBisect = typedArray.hasValue(R.styleable.VerificationCodeInputView_vciv_et_spacing);
         if (isBisect) {
             mEtSpacing = typedArray.getDimensionPixelSize(R.styleable.VerificationCodeInputView_vciv_et_spacing, 0);
@@ -195,8 +199,11 @@ public class VerificationCodeInputView extends RelativeLayout {
         for (int i = 0; i < mEtNumber; i++) {
             RelativeLayout relativeLayout = new RelativeLayout(mContext);
             relativeLayout.setLayoutParams(getEtLayoutParams(i));
-            relativeLayout.setBackgroundResource(mEtBackground);
-
+            if (mEtBackground > 0) {
+                relativeLayout.setBackgroundResource(mEtBackground);
+            } else {
+                relativeLayout.setBackgroundColor(mEtBackground);
+            }
             TextView textView = new TextView(mContext);
             initTextView(textView);
             relativeLayout.addView(textView);
