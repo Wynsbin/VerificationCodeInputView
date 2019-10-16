@@ -14,6 +14,19 @@
 ![](https://github.com/WShaobin/VerificationCodeInputView/blob/master/gif/GIF.gif)
 
 ----------
+## 原理
+
+大致是Edittext+ n* TextView，然后设置edittext字体跟背景颜色都为透明，隐藏光标。
+
+Edittext：监听edittext每次输入一个字符就赋值到对应的TextView上，然后在清除自己。
+
+下划线：在TextView下添加View
+
+光标：这里的每个TextView的焦点光标其实对View设置了ValueAnimator。
+
+粘贴：粘贴弹窗是自定义的PopupWindow
+
+----------
 ## Gradle
 
 Step 1. Add it in your root build.gradle at the end of repositories:
@@ -31,7 +44,7 @@ Step 2. Add the dependency:
 
 ```
 dependencies {
-    implementation 'com.github.WShaobin:VerificationCodeInputView:1.0.0'
+    implementation 'com.github.WShaobin:VerificationCodeInputView:1.0.1'
 }
 ```
 ----------
