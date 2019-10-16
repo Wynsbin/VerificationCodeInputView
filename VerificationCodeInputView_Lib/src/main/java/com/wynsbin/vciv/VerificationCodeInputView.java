@@ -15,7 +15,6 @@ import android.text.InputType;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.KeyEvent;
@@ -46,6 +45,7 @@ public class VerificationCodeInputView extends RelativeLayout {
     private OnInputListener onInputListener;
 
     private LinearLayout mLinearLayout;
+    private RelativeLayout[] mRelativeLayouts;
     private TextView[] mTextViews;
     private View[] mUnderLineViews;
     private View[] mCursorViews;
@@ -120,9 +120,11 @@ public class VerificationCodeInputView extends RelativeLayout {
     private int mEtCursorHeight;
     private int mEtCursorColor;
     /**
-     * 输入框的背景色
+     * 输入框的背景色、焦点背景色、是否有焦点背景色
      */
     private int mEtBackground;
+    private int mEtFocusBackground;
+    private boolean isFocusBackgroud;
 
     public enum VCInputType {
         /**
@@ -172,6 +174,11 @@ public class VerificationCodeInputView extends RelativeLayout {
         if (mEtBackground < 0) {
             mEtBackground = typedArray.getColor(R.styleable.VerificationCodeInputView_vciv_et_background, Color.WHITE);
         }
+        isFocusBackgroud = typedArray.hasValue(R.styleable.VerificationCodeInputView_vciv_et_foucs_background);
+        mEtFocusBackground = typedArray.getResourceId(R.styleable.VerificationCodeInputView_vciv_et_foucs_background, -1);
+        if (mEtFocusBackground < 0) {
+            mEtFocusBackground = typedArray.getColor(R.styleable.VerificationCodeInputView_vciv_et_foucs_background, Color.WHITE);
+        }
         isBisect = typedArray.hasValue(R.styleable.VerificationCodeInputView_vciv_et_spacing);
         if (isBisect) {
             mEtSpacing = typedArray.getDimensionPixelSize(R.styleable.VerificationCodeInputView_vciv_et_spacing, 0);
@@ -188,6 +195,7 @@ public class VerificationCodeInputView extends RelativeLayout {
     }
 
     private void initView() {
+        mRelativeLayouts = new RelativeLayout[mEtNumber];
         mTextViews = new TextView[mEtNumber];
         mUnderLineViews = new View[mEtNumber];
         mCursorViews = new View[mEtNumber];
@@ -199,11 +207,9 @@ public class VerificationCodeInputView extends RelativeLayout {
         for (int i = 0; i < mEtNumber; i++) {
             RelativeLayout relativeLayout = new RelativeLayout(mContext);
             relativeLayout.setLayoutParams(getEtLayoutParams(i));
-            if (mEtBackground > 0) {
-                relativeLayout.setBackgroundResource(mEtBackground);
-            } else {
-                relativeLayout.setBackgroundColor(mEtBackground);
-            }
+            setEtBackground(relativeLayout, mEtBackground);
+            mRelativeLayouts[i] = relativeLayout;
+
             TextView textView = new TextView(mContext);
             initTextView(textView);
             relativeLayout.addView(textView);
@@ -318,6 +324,14 @@ public class VerificationCodeInputView extends RelativeLayout {
         //设置点击隐藏popwindow
         ColorDrawable dw = new ColorDrawable(Color.TRANSPARENT);
         mPopupWindow.setBackgroundDrawable(dw);
+    }
+
+    private void setEtBackground(RelativeLayout rl, int background) {
+        if (background > 0) {
+            rl.setBackgroundResource(background);
+        } else {
+            rl.setBackgroundColor(background);
+        }
     }
 
     private String getClipboardString() {
@@ -437,7 +451,7 @@ public class VerificationCodeInputView extends RelativeLayout {
     }
 
     /**
-     * 设置焦点输入框底部线跟焦点色
+     * 设置焦点输入框底部线、光标颜色、背景色
      */
     private void setCursorColor() {
         if (valueAnimator != null) {
@@ -451,11 +465,17 @@ public class VerificationCodeInputView extends RelativeLayout {
                 View underLineView = mUnderLineViews[i];
                 underLineView.setBackgroundColor(mEtUnderLineDefaultColor);
             }
+            if (isFocusBackgroud) {
+                setEtBackground(mRelativeLayouts[i], mEtBackground);
+            }
         }
         if (mCodes.size() < mEtNumber) {
             setCursorView(mCursorViews[mCodes.size()]);
             if (mEtUnderLineShow) {
                 mUnderLineViews[mCodes.size()].setBackgroundColor(mEtUnderLineFocusColor);
+            }
+            if (isFocusBackgroud) {
+                setEtBackground(mRelativeLayouts[mCodes.size()], mEtFocusBackground);
             }
         }
     }

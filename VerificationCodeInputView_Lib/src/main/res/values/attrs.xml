@@ -22,6 +22,8 @@
         <attr name="vciv_et_spacing" format="dimension" />
         <!--输入框背景色-->
         <attr name="vciv_et_background" format="reference|color" />
+        <!--输入框焦点背景色-->
+        <attr name="vciv_et_foucs_background" format="reference|color" />
         <!--输入框焦点宽度-->
         <attr name="vciv_et_cursor_width" format="dimension" />
         <!--输入框焦点高度-->

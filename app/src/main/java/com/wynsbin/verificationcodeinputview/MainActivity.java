@@ -17,11 +17,14 @@ public class MainActivity extends AppCompatActivity implements VerificationCodeI
 
         VerificationCodeInputView verificationCodeInputView1 = findViewById(R.id.vciv_code1);
         VerificationCodeInputView verificationCodeInputView2 = findViewById(R.id.vciv_code2);
+        VerificationCodeInputView verificationCodeInputView3 = findViewById(R.id.vciv_code3);
         verificationCodeInputView1.setOnInputListener(this);
         verificationCodeInputView2.setOnInputListener(this);
+        verificationCodeInputView3.setOnInputListener(this);
         findViewById(R.id.btn_clear).setOnClickListener(view -> {
             verificationCodeInputView1.clearCode();
             verificationCodeInputView2.clearCode();
+            verificationCodeInputView3.clearCode();
         });
     }
 
