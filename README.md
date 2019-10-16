@@ -8,12 +8,10 @@
 
 2、支持长按粘贴或某些键盘粘贴功能(数字模式时，如果粘贴板第一个条不是数字则不会弹出粘贴窗)
 
-----------
 ## Demo
 
 ![](https://github.com/WShaobin/VerificationCodeInputView/blob/master/gif/GIF.gif)
 
-----------
 ## 原理
 
 大致是Edittext+ n* TextView，然后设置edittext字体跟背景颜色都为透明，隐藏光标。
@@ -26,7 +24,6 @@ Edittext：监听edittext每次输入一个字符就赋值到对应的TextView�
 
 粘贴：粘贴弹窗是自定义的PopupWindow
 
-----------
 ## Gradle
 
 Step 1. Add it in your root build.gradle at the end of repositories:
@@ -48,7 +45,6 @@ dependencies {
 }
 ```
 
-----------
 
 ## How to use
 
@@ -96,7 +92,6 @@ view.setOnInputListener(new VerificationCodeInputView.OnInputListener() {
 view.clearCode();
 ```
 
-----------
 ## Attributes
 
 |name|说明|format|默认值|
