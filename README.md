@@ -94,7 +94,7 @@ view.clearCode();
 |vciv_et_text_color|输入框文字颜色|color|```Color.BLACK```|
 |vciv_et_text_size|输入框文字大小|dimension|```14sp```|
 |vciv_et_spacing|输入框间距，不输入则代表平分|dimension|``` ```|
-|vciv_et_background|输入框背景色|reference|color|```Color.WHITE```|
+|vciv_et_background|输入框背景色|reference&color|```Color.WHITE```|
 |vciv_et_cursor_width|输入框焦点宽度|dimension|```2dp```|
 |vciv_et_cursor_height|输入框焦点高度|dimension|```30dp```|
 |vciv_et_cursor_color|输入框焦点颜色|color|```#C3C3C3```|
