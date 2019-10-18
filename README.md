@@ -12,7 +12,7 @@
 
 ![](https://github.com/WShaobin/VerificationCodeInputView/blob/master/gif/GIF.gif)
 
-## 原理
+## Principle
 
 大致是Edittext + n* TextView，然后设置edittext字体跟背景颜色都为透明，隐藏光标
 
@@ -95,7 +95,7 @@ view.clearCode();
 
 ## Attributes
 
-|name|说明|format|默认值|
+|name|describe|format|default|
 |:--|:--|:--|:--:|
 |vciv_et_number|输入框的数量|integer|4|
 |vciv_et_inputType|输入框输入类型|enum|数字模式|
@@ -117,7 +117,7 @@ view.clearCode();
 
 ### VCInputType
 
-|name|说明
+|name|describe
 |:--|:--|
 |number|数字模式|
 |numberPassword|数字密码模式|
@@ -125,7 +125,7 @@ view.clearCode();
 |textPassword|字符密码模式|
 
 
-### 输入框背景色支持
+### vciv_et_background&vciv_et_foucs_background
 
 1、@drawable/xxx
 
