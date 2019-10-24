@@ -36,6 +36,6 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-//    implementation 'com.github.WShaobin:VerificationCodeInputView:1.0.2'
+//    implementation 'com.github.Wynsbin:VerificationCodeInputView:1.0.2'
     api project(':VerificationCodeInputView_Lib')
 }
