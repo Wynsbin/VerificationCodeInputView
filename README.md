@@ -1,6 +1,6 @@
 # VerificationCodeInputView
 
-[![](https://jitpack.io/v/WShaobin/VerificationCodeInputView.svg)](https://jitpack.io/#WShaobin/VerificationCodeInputView)
+[![](https://jitpack.io/v/Wynsbin/VerificationCodeInputView.svg)](https://jitpack.io/#Wynsbin/VerificationCodeInputView)
 
 **验证码输入框**
 
@@ -10,7 +10,7 @@
 
 ## Demo
 
-![](https://github.com/WShaobin/VerificationCodeInputView/blob/master/gif/GIF.gif)
+![](https://github.com/Wynsbin/VerificationCodeInputView/blob/master/gif/GIF.gif)
 
 ## Principle
 
@@ -41,7 +41,7 @@ Step 2. Add the dependency:
 
 ```
 dependencies {
-    implementation 'com.github.WShaobin:VerificationCodeInputView:1.0.2'
+    implementation 'com.github.Wynsbin:VerificationCodeInputView:1.0.2'
 }
 ```
 
