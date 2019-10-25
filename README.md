@@ -1,3 +1,5 @@
+![](https://github.com/Wynsbin/Screenshots/blob/master/VerificationCodeInputView/VerificationCodeInputView.png)
+
 # VerificationCodeInputView
 
 [![](https://jitpack.io/v/Wynsbin/VerificationCodeInputView.svg)](https://jitpack.io/#Wynsbin/VerificationCodeInputView)
@@ -10,7 +12,7 @@
 
 ## Demo
 
-![](https://github.com/Wynsbin/VerificationCodeInputView/blob/master/gif/GIF.gif)
+![](https://github.com/Wynsbin/Screenshots/blob/master/VerificationCodeInputView/vciv_oneself.gif)
 
 ## Principle
 
