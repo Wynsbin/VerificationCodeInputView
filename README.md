@@ -4,7 +4,7 @@
 
 </div>
 
-# VerificationCodeInputView
+# VerificationCodeInputView -- 自定义验证码输入框
 
 [![这里写图片描述](https://jitpack.io/v/Wynsbin/VerificationCodeInputView.svg)](https://jitpack.io/#Wynsbin/VerificationCodeInputView)
 
