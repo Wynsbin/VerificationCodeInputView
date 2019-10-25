@@ -1,8 +1,12 @@
-![](https://github.com/Wynsbin/Screenshots/blob/master/VerificationCodeInputView/VerificationCodeInputView.png)
+<div align=center>
+
+[![这里写图片描述](https://github.com/Wynsbin/Screenshots/blob/master/VerificationCodeInputView/VerificationCodeInputView.png)
+
+</div>
 
 # VerificationCodeInputView
 
-[![](https://jitpack.io/v/Wynsbin/VerificationCodeInputView.svg)](https://jitpack.io/#Wynsbin/VerificationCodeInputView)
+[![这里写图片描述](https://jitpack.io/v/Wynsbin/VerificationCodeInputView.svg)](https://jitpack.io/#Wynsbin/VerificationCodeInputView)
 
 **验证码输入框**
 
