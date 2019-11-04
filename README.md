@@ -28,7 +28,7 @@ Edittext：监听edittext每次输入一个字符就赋值到对应的TextView�
 
 光标：这里的每个TextView的焦点光标其实对View设置了ValueAnimator
 
-粘贴：粘贴弹窗是自定义的PopupWindow
+粘贴：粘贴弹窗是自定义的PopupWindow 
 
 ## Gradle
 
