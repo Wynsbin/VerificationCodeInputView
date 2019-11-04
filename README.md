@@ -1,6 +1,6 @@
 <div align=center>
 
-![这里写图片描述](https://github.com/Wynsbin/Screenshots/blob/master/VerificationCodeInputView/VerificationCodeInputView.png)
+![这里写图片描述](https://github.com/Wynsbin/Screenshots/tree/master/VerificationCodeInputView/VerificationCodeInputView.png)
 
 </div>
 
@@ -16,7 +16,7 @@
 
 ## Demo
 
-![这里写图片描述](https://github.com/Wynsbin/Screenshots/blob/master/VerificationCodeInputView/vciv_oneself.gif)
+![这里写图片描述](https://github.com/Wynsbin/Screenshots/tree/master/VerificationCodeInputView/vciv_oneself.gif)
 
 ## Principle
 
